@@ -9,27 +9,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="content">
-        <h1>Library Project</h1>
-        <button class="add">Dodaj książke</button>
-      </div>
-      <div class="book-menu">
-        <form action="" method="get">
-          <div class="book-name">
-            <label for="bookName"></label>
-            <input type="text" name="bookName" id="bookName" />
-          </div>
-          <div class="author">
+      <div class="menu">
+        <div class="content">
+          <h1>Library Project</h1>
+          <button class="add">Dodaj książke</button>
+        </div>
+
+        <div class="book-menu">
+          <form action="" method="get">
+            <div class="book-name">
+              <label for="bookName">Book Name:</label>
+              <input type="text" name="bookName" id="bookName" />
+            </div>
             <div class="author">
-              <label for="author"></label>
-              <input type="text" name="author" id="author" />
+              <div class="author">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" />
+              </div>
+              <div class="book-read">
+                <label for="read">Read:</label>
+                <input type="checkbox" name="read" id="read" />
+              </div>
             </div>
-            <div class="book-read">
-              <label for="read"></label>
-              <input type="checkbox" name="read" id="read" />
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div class="bookList">
+          <div class="Book1 Book"></div>
+
+          <div class="Book1 Book"></div>
+          <div class="Book1 Book"></div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
