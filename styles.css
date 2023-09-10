@@ -35,12 +35,11 @@ body {
 .book-menu {
   display: flex;
   display: none;
-
   align-items: center;
   justify-content: center;
   background-color: #d4c4b0;
   width: 30%;
-  height: 300px;
+  height: 500px;
 }
 .book-menu label {
   margin-top: 40px;
@@ -52,17 +51,34 @@ input {
 }
 .bookList {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(130px, 270px));
   gap: 15px;
   width: 60%;
   max-height: 650px;
+  min-height: 200px;
   background-color: red;
   margin: 20px;
   overflow-y: scroll;
 }
-.Book {
+.bookCard {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   margin: 8px;
-  min-height: 200px;
+  min-height: 220px;
+}
+.topHeader {
+  background-color: blue;
+  height: 40%;
+  font-size: 35px;
+}
+.bookAuthor {
+  font-size: 25px;
+}
+.readStatus button {
+  font-size: 20px;
+}
+.delete {
+  color: red;
+  width: 25px;
 }
