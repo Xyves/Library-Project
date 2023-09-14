@@ -1,74 +1,64 @@
 body {
-  background-color: rgb(17, 15, 15);
-  font-size: 35px;
+  background-color: #131516;
+  font-size: 45px;
   height: 100vh;
 }
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+label,
+input {
+  display: inline-block;
+  color: white;
 }
-.content {
-  background-color: #48c1c3;
+.bookHeader {
+  color: white;
+  font-size: 2.5rem;
+  z-index: 4;
+  box-shadow: 0 2px 5px rgba(112, 55, 55, 0.2);
+  padding: 10px;
   text-align: center;
-  width: 40%;
-  height: 200px;
-}
-.content h1 {
-  text-align: center;
-  font-size: 2em;
-  color: #ffff;
-}
-.add {
-  margin-top: 6%;
-  width: 320px;
-  height: 80px;
-  text-align: center;
-  margin-bottom: 35px;
-  font-size: 1.3rem;
-  background-color: #ee2a7d;
-}
-.add:active {
-  box-shadow: 2px 2px 5px #f03382;
-}
-.book-menu {
-  display: flex;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-color: #d4c4b0;
-  width: 30%;
-  height: 500px;
+  margin: 25px auto 50px;
 }
 .book-menu label {
-  margin-top: 40px;
+  margin-left: 20px;
   font-size: 30px;
-  margin-right: 5px;
+}
+.book-menu input {
+  font-size: 30px;
+  text-align: left;
+  width: 250px;
+  margin-bottom: 40px;
+}
+
+#read {
+  width: 30px;
+  height: 30px;
 }
 input {
-  text-align: center;
+  margin-left: 20px;
 }
 .bookList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 270px));
-  gap: 15px;
-  width: 60%;
-  max-height: 650px;
-  min-height: 200px;
-  background-color: red;
-  margin: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+  margin: 50px;
   overflow-y: scroll;
+  margin: 50px 30px;
 }
+
+#read {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
 .bookCard {
   display: flex;
   flex-direction: column;
   background-color: white;
   margin: 8px;
   min-height: 220px;
+  gap: 15px;
 }
 .topHeader {
-  background-color: blue;
+  background-color: rgb(83, 211, 66);
   height: 40%;
   font-size: 35px;
 }
@@ -80,5 +70,31 @@ input {
 }
 .delete {
   color: red;
-  width: 25px;
+}
+.btn-submit {
+  width: 90%;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 8px;
+  border: 2px solid #89cbea6e;
+  margin: 50px auto;
+  cursor: pointer;
+  display: block;
+}
+.container {
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+}
+.sidebar {
+  grid-row: 1/3;
+  background-color: #131516;
+  display: flex;
+}
+.header {
+  background-color: rgba(11, 131, 186, 0.63);
+}
+.cards {
+  background-color: #454a4d;
 }
