@@ -1,13 +1,7 @@
 const bookMenu = document.querySelector(".book-menu");
 const bookList = document.querySelector(".bookList");
-const template = document.createElement("template");
+const template = document.querySelector("#myTemplate");
 
-for (let i = 1; i <= 20; i++) {
-  const grid = document.createElement("div");
-  grid.className = "grid";
-  // grid.textContent = `Grid ${i}`;
-  bookList.appendChild(grid);
-}
 // template.bookList.append(document.createElement("div"));
 // document.head.append(template);
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
       read: bookRead,
     };
 
-    console.log(formData);
+    addBook(formData);
   }
 });
-function addBook() {}
+
+function addBook(formData) {
+  const clone = document.importNode(template.content, true);
+  const topHeader = clone.querySelector(".topHeader");
+  const bottomCard = clone.querySelector(".bottomCard");
+  bottomCard.querySelector("#cardRead").checked = formData.read;
+  topHeader.querySelector("h2").textContent = `${formData.bookName}`;
+  topHeader.querySelector(".bookAuthor").textContent = `${formData.author}`;
+  topHeader.querySelector(".pages").textContent = `${formData.pages}`;
+  bookList.appendChild(clone);
+  form.reset();
+}
+function clear() {}
