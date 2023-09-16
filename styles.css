@@ -85,9 +85,12 @@ body {
   gap: 15px;
 }
 .topHeader {
+  display: flex;
+  gap: 25%;
   background-color: rgb(83, 211, 66);
   height: 40%;
   font-size: 35px;
+  flex-wrap: wrap;
 }
 .bookAuthor {
   font-size: 25px;
@@ -97,12 +100,18 @@ body {
   background-color: #454a4d;
 }
 
-.flex {
-  display: flex;
-}
 label {
   color: white;
 }
 input {
   margin-left: 20px;
 }
+
+.pages {
+  display: block;
+}
+/* TO DO:
+Style header
+Add margin to status
+
+*/
