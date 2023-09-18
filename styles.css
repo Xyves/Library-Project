@@ -9,6 +9,21 @@ body {
   grid-template-columns: 1fr 4fr;
   height: 100vh;
 }
+/* Header */
+
+.header h2 {
+  font-family: "EB Garamond", serif;
+  text-shadow: 0px 2px 2px rgba(38, 0, 255, 0.685);
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+.header {
+  background-color: rgba(11, 131, 186, 0.63);
+}
+
 /* Sidebar */
 
 .sidebar {
@@ -18,7 +33,7 @@ body {
 }
 .bookHeader {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   z-index: 4;
   box-shadow: 0 2px 5px rgba(112, 55, 55, 0.2);
   padding: 10px;
@@ -37,13 +52,13 @@ body {
 }
 .book-menu label {
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 3rem;
 }
 .book-menu input {
   font-size: 30px;
   text-align: left;
   min-width: 150px;
-  max-width: 270px;
+  max-width: 295px;
   margin-bottom: 40px;
 }
 
@@ -54,46 +69,35 @@ body {
   margin: 0 auto;
   margin-top: 10px;
 }
-/* Header */
 
-.header h2 {
-  font-family: "EB Garamond", serif;
-  text-shadow: 0px 2px 2px rgba(38, 0, 255, 0.685);
-  font-size: 100px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin: 20px 0;
-}
-.header {
-  background-color: rgba(11, 131, 186, 0.63);
-}
 /* Content */
 
 .bookList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-  margin: 50px;
-  margin: 50px 30px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 250px));
+  margin: 50px auto;
 }
 .bookCard {
   display: flex;
   flex-direction: column;
   background-color: white;
   margin: 8px;
-  min-height: 220px;
-  gap: 15px;
+  min-height: 250px;
+  gap: 40px;
 }
 .topHeader {
   display: flex;
   gap: 25%;
   background-color: rgb(83, 211, 66);
-  height: 40%;
-  font-size: 35px;
+  height: 45%;
+  font-size: 30px;
   flex-wrap: wrap;
+  font-weight: bold;
+  text-align: left;
 }
+
 .bookAuthor {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .content {
@@ -108,10 +112,18 @@ input {
 }
 
 .pages {
+  font-size: 0.9rem;
   display: block;
+  text-align: end;
+  margin-left: auto;
 }
-/* TO DO:
-Style header
-Add margin to status
 
-*/
+.action-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline-block;
+}
+.bottomCard h3 {
+  text-align: center;
+}
