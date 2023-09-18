@@ -20,7 +20,8 @@
   transition: 0.35s ease-in-out;
   box-sizing: border-box;
   cursor: pointer;
-  left: 25%;
+  left: 30%;
+  top: 5%;
 }
 
 .action-btns label {
