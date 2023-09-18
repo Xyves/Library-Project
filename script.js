@@ -1,11 +1,8 @@
 const bookMenu = document.querySelector(".book-menu");
 const bookList = document.querySelector(".bookList");
-const template = document.querySelector("#myTemplate");
+const form = document.querySelector("form");
 
-// template.bookList.append(document.createElement("div"));
-// document.head.append(template);
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("form");
   const submit = document.querySelector(".btn-submit");
   submit.addEventListener("click", function (event) {
     event.preventDefault();
@@ -28,16 +25,36 @@ document.addEventListener("DOMContentLoaded", function () {
     addBook(formData);
   }
 });
-
+let cardCount = 1;
 function addBook(formData) {
+  const template = document.querySelector("#myTemplate");
   const clone = document.importNode(template.content, true);
+  const card = clone.querySelector(".bookCard");
   const topHeader = clone.querySelector(".topHeader");
   const bottomCard = clone.querySelector(".bottomCard");
-  bottomCard.querySelector("#cardRead").checked = formData.read;
+  const input = bottomCard.querySelector("input[type='checkbox']");
+  // Input
+  // Generate inique ID
+  const inputId = `cardRead${cardCount}`;
+  const labelFor = inputId;
+
+  input.id = inputId;
+
+  // Label
+  const label = card.querySelector("label");
+  label.setAttribute("for", labelFor);
+
+  input.checked = formData.read;
   topHeader.querySelector("h2").textContent = `${formData.bookName}`;
   topHeader.querySelector(".bookAuthor").textContent = `${formData.author}`;
-  topHeader.querySelector(".pages").textContent = `${formData.pages}`;
+  topHeader.querySelector(".pages").textContent = `${
+    formData.pages + " " + "pages"
+  }`;
   bookList.appendChild(clone);
+
+  // Increment cardCount
+  cardCount++;
+  // Reset form
   form.reset();
 }
 function clear() {}
