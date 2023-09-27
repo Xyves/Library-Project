@@ -1,6 +1,5 @@
 .action-btns {
-  width: 42%;
-  --size: 45px;
+  --size: 42px;
   position: relative;
   background: linear-gradient(90deg, #f19af3, #f099b5);
   line-height: 0;
@@ -20,7 +19,7 @@
   transition: 0.35s ease-in-out;
   box-sizing: border-box;
   cursor: pointer;
-  left: 30%;
+  left: 35%;
   top: 5%;
 }
 

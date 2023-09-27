@@ -1,20 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
+  font-family: "EB Garamond", serif;
   background-color: #131516;
   font-size: 45px;
   height: 100vh;
 }
 .container {
   display: grid;
-  grid-template-rows: 150px 1fr;
-  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 170px 1fr;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
   height: 100vh;
 }
 /* Header */
 
 .header h2 {
-  font-family: "EB Garamond", serif;
   text-shadow: 0px 2px 2px rgba(38, 0, 255, 0.685);
-  font-size: 100px;
+  font-size: 4.3rem;
   font-weight: bold;
   color: white;
   text-align: center;
@@ -22,6 +27,9 @@ body {
 }
 .header {
   background-color: rgba(11, 131, 186, 0.63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Sidebar */
@@ -55,11 +63,14 @@ body {
   font-size: 3rem;
 }
 .book-menu input {
-  font-size: 30px;
+  font-size: 1.1rem;
   text-align: left;
-  min-width: 150px;
-  max-width: 295px;
-  margin-bottom: 40px;
+  width: 70%;
+  margin-bottom: 5%;
+}
+.book-menu input::placeholder {
+  color: red;
+  font-size: 20px;
 }
 
 #read {
@@ -74,34 +85,42 @@ body {
 
 .bookList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 250px));
-  margin: 50px auto;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 550px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 360px));
+  margin: 50px 30px;
 }
 .bookCard {
   display: flex;
   flex-direction: column;
   background-color: white;
   margin: 8px;
-  min-height: 250px;
-  gap: 40px;
+  min-height: 210px;
 }
 .topHeader {
   display: flex;
-  gap: 25%;
-  background-color: rgb(83, 211, 66);
-  height: 45%;
-  font-size: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-weight: bold;
+  line-height: 1.8rem;
   text-align: left;
+  align-items: center;
+  height: 25%;
 }
-
+.bookTitle {
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 .bookAuthor {
-  font-size: 18px;
+  font-size: 22px;
 }
-
+.pages {
+  font-size: 1.1rem;
+  display: block;
+  margin-left: auto;
+}
 .content {
   background-color: #454a4d;
+  min-width: 300px;
 }
 
 label {
@@ -110,14 +129,6 @@ label {
 input {
   margin-left: 20px;
 }
-
-.pages {
-  font-size: 0.9rem;
-  display: block;
-  text-align: end;
-  margin-left: auto;
-}
-
 .action-btns {
   display: flex;
   flex-direction: column;
@@ -126,4 +137,9 @@ input {
 }
 .bottomCard h3 {
   text-align: center;
+  font-size: 15px;
+}
+.book-cover {
+  margin: 12px;
+  height: 60%;
 }
