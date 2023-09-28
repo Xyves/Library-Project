@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     saveUserData();
   });
+
   class createData {
     constructor(bookName, bookAuthor, bookPages, bookRead) {
       this.bookName = bookName;
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.bookRead = bookRead;
     }
   }
+
   function saveUserData() {
     const bookName = document.querySelector("#bookName").value;
     const bookAuthor = document.querySelector("#author").value;
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
 let cardCount = 4;
 function addBook(formData) {
   const template = document.querySelector("#myTemplate");
@@ -70,4 +73,3 @@ function addBook(formData) {
   // Reset form
   form.reset();
 }
-function clear() {}
