@@ -92,14 +92,14 @@ body {
 
 .bookList {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(200px, 550px));
+  grid-template-rows: repeat(auto-fit, minmax(220px, 550px));
   grid-template-columns: repeat(auto-fit, minmax(150px, 360px));
   margin: 50px 30px;
 }
 .bookCard {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.63);
+  background-color: #edffecbe;
   margin: 8px;
   min-height: 210px;
 }
@@ -126,7 +126,7 @@ body {
   margin-left: auto;
 }
 .content {
-  background-color: #454a4d;
+  background-color: #1d23255b;
   min-width: 300px;
 }
 
