@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       addBook(formData);
     } else {
-      document.querySelector("#bookName").placeholder = "Update the book name!";
-      document.querySelector("#author").placeholder = "Update the author!";
+      document.querySelector("#bookName").placeholder = "Update the book name.";
+      document.querySelector("#author").placeholder = "Update the author.";
       document.querySelector("#book-pages").placeholder =
-        "Update the number of pages!";
+        "Update the number of pages.";
     }
   }
 });
